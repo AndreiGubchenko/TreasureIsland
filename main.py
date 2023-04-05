@@ -37,24 +37,6 @@ def game_new(varr=None):
         steps = form.steps.data
         see_pirat = form.see_pirat.data
 
-    # #Первоначальное размещение на карте клада, пиратов и героя
-    # if len(game.koord_klad) == 0:   # Если нет координат клада, размещаем его на карте
-    #     game.karta_ins_klad()
-    # if len(game.koord_pirat) == 0:  # Если нет координат  паратов, размещаем их на карте
-    #     game.karta_ins_pirat()
-    #     if game.it_is_klad(game.koord_pirat[0], game.koord_pirat[1]):
-    #         # Если при размещении пиратов на карте они совпали с размещением клада, удаляем пиратов и размещаем заново
-    #         game.karta_del_pirat()
-    #         game.karta_ins_pirat()
-    # if len(game.koord_hero) == 0:   # Если нет координат героя, размещаем его на карте
-    #     game.karta_ins_hero()
-    #     if game.it_is_klad(game.koord_hero[0], game.koord_hero[1]) or \
-    #             game.it_is_pirat(game.koord_hero[0], game.koord_hero[1]):
-    #         # Если при размещении героя на карте он совпал с размещением пиратов или клада, удаляем героя и размещаем заново
-    #         game.karta_del_hero()
-    #         game.karta_ins_hero()
-    # # Окончание первоначального размещения на карте клада, пиратов и героя
-
     if game.count == 3 or see_pirat == 1:
         game.karta_del_pirat()
         game.karta_ins_pirat()
