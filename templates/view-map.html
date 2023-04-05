@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }}
+{{ title }}
+{% endblock %}
+{% block content %}
+<!-- Header -->
+    <header class="header">
+        <div class="overlay">
+            <div class="container">
+                <div class="description">
+                    <h1>По всей видимости Вы не удержались от любопытства)))</h1>
+                    <p>Здесь можно увидеть где спрятан клад и где на данный момент расположились пираты.</p>
+                    {% if butn == 0 %}
+                        <p>Теперь Вам будет намного легче, Вы знаете в каком направлении двигаться)</p>
+                        <button class="btn btn-outline-secondary btn-lg" onclick="document.location='/game'">Вернуться в игру</button>
+                    {% else %}
+                        <p>Игра была окончена</p>
+                        <button class="btn btn-outline-secondary btn-lg" onclick="document.location='/game/new'">На поиски клада</button>
+                    {% endif %}
+                    <p>&nbsp</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <table class="world">
+                                {% for i in range(game.karta|length) %}
+                                    <tr>
+                                        {% for j in range(game.karta[0]|length) %}
+                                            {% if game.karta[i][j] == 1 %}
+                                                <td class="cell living-cell"></td>
+                                            {% elif game.karta[i][j] == 2 %}
+                                                <td class="cell dead-cell"></td>
+                                            {% elif game.karta[i][j] == 3 %}
+                                                <td class="cell hero-cell"></td>
+                                            {% else %}
+                                                <td class="cell"></td>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <table class="worldview">
+                                <tr>
+                                  <td class="cell living-cell tdview"></td>
+                                  <td class="tdview">&nbsp;</td>
+                                  <td class="tdview"><p>клад</p></td>
+                                </tr>
+                                <tr>
+                                  <td class="cell dead-cell tdview"></td>
+                                  <td class="tdview">&nbsp;</td>
+                                  <td class="tdview"><p>пираты</p></td>
+                                </tr>
+                                <tr>
+                                  <td class="cell hero-cell tdview"></td>
+                                  <td class="tdview">&nbsp;</td>
+                                  <td class="tdview"><p>Вы</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}

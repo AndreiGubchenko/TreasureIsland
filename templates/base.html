@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Остров сокровищ{% endblock %}</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+{% block menu %}
+{% include '_menu.html' %}
+{% endblock %}
+{% block content %}
+{% endblock %}
+{% block footer%}
+<!--footer-->
+    <footer class="footer mt-auto py-3" style="background:#F97300;">
+	<div class="container">
+        <p class="text-center text-white lead">Copyright &copy; 2023 for <a href="https://stepik.org/course/97540" target="_blank" class="text-center text-white lead">Stepik course</a></p>
+
+	</div>
+  </footer>
+
+    <!-- add Javasscript file from js file -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src='static/js/main.js'></script>
+{% endblock%}
+</body>
+</html>
