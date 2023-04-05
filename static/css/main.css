@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html,h1,h2,h3,h4,h5,h6,a{
+ font-family: "Raleway";
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background:#f4f4f4;
+
+}
+
+.navbar{
+background:#0a72f0;
+}
+.nav-link, .navbar-brand{
+color: #fff;
+cursor: pointer;
+}
+.nav-link{
+margin-right: 1em !important;
+}
+.nav-link:hover{
+background: #f4f4f4;
+color: #0a72f0;
+}
+.red{
+color: #f9f103;
+}
+.navbar-collapse{
+justify-content: flex-end;
+}
+.navbar-toggler{
+background: #fff !important
+}
+.bg-dark{
+background-color:#343a40!important
+}
+.bg-primary{
+background-color:#343a40!important
+}
+
+overlay{
+ position: absolute;
+ min-height: 100%;
+ min-width: 100%;
+ left: 0;
+ top: 0;
+ background: rgba(244, 244, 244, 0.79);
+}
+
+/*header style*/
+.header{
+	position: relative;
+	background-image: url('../images/karta-2.jpg');
+
+	background-size: cover;
+	background-position: center;
+}
+.overlay{
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(244, 244, 244, 0.79);
+}
+.description{
+    position: absolute;
+    top: 20%;
+    margin: auto;
+    padding: 2em;
+
+}
+.description h1{
+	color:#F97300 ;
+}
+.description p{
+	color:#666;
+	font-size: 20px;
+	width: 75%;
+	line-height: 1.5;
+	text-align: justify;
+}
+.description button{
+	border:1px  solid #F97300;
+	background:#F97300;
+	color:#fff;
+}
+
+/*forms*/
+.game-form{
+	margin: 6em 0;
+	position: relative;
+}
+.game-form h1{
+	padding:2em 1px;
+	color: #F97300;
+}
+.game-form .right{
+	max-width: 600px;
+}
+.game-form .right .btn-secondary{
+	background:  #F97300;
+	color: #fff;
+	border:0;
+}
+.game-form .right .form-control::placeholder{
+	color: #888;
+	font-size: 16px;
+}
+.game-form_li{
+    list-style-type: none;
+    display: inline-block;
+}
+.game-form_p{
+    color:#666;
+	font-size: 20px;
+}
+
+/*Karta*/
+.world {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.worldview {
+    border: 0px;
+}
+.tdview {
+    border: 0px;
+    padding: 5px;
+    height: 10px;
+}
+
+.cell {
+    padding: 5px;
+    background: whitesmoke;
+    width: 30px;
+    height: 30px;
+}
+
+.hero-cell {
+    background: blue;
+}
+
+.living-cell {
+    background: lightgreen;
+}
+
+.dead-cell {
+    background: darkred;
+}
